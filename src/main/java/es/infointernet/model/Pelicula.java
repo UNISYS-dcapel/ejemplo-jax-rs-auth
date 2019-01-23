@@ -24,4 +24,11 @@ public class Pelicula {
 		this.actoresList = actoresList;
 	}
 
+	@Override
+	public String toString() {
+		return "Pelicula{" +
+				"titulo='" + titulo + '\'' +
+				", actoresList=" + actoresList +
+				'}';
+	}
 }

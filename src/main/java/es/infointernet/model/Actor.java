@@ -10,6 +10,12 @@ public class Actor {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}	
+	}
 
+	@Override
+	public String toString() {
+		return "Actor{" +
+				"nombre='" + nombre + '\'' +
+				'}';
+	}
 }
