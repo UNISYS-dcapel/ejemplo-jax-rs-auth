@@ -12,16 +12,16 @@
 Recomendamos el uso de alguna aplicación como la extensión Postman de Chrome (https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)
 <ul>
 <li>
-URL para obtener el token JWT: <a href="http://localhost:8080/DemoWeb/rest/usuario/login?user=test&password=test">http://localhost:8080/DemoWeb/rest/usuario/login?user=test&password=test</a> <br/>
+URL para obtener el token JWT: <a href="http://localhost:9090/rest/usuario/login?user=test&password=test">http://localhost:9090/rest/usuario/login?user=test&password=test</a> <br/>
 Usuario normal: test / test<br/>
 Usuario con rol administrador: admin / admin<br/>
 El token viene de vuelta en la cabecera Authorization de la respuesta.
 </li>
 <li>
-Invocar la API (usuario normal): (GET) <a hrel="http://localhost:8080/DemoWeb/rest/pelicula/1">http://localhost:8080/DemoWeb/rest/pelicula/1</a>
+Invocar la API (usuario normal): (GET) <a hrel="http://localhost:9090/rest/pelicula/1">http://localhost:9090/rest/pelicula/1</a>
 </li>
 <li>
-Invocar la API (usuario administrador): (PUT) http://localhost:8080/DemoWeb/rest/pelicula/
+Invocar la API (usuario administrador): (PUT) http://localhost:9090/rest/pelicula/
 </li>
 </ul>
 El token debe ir en la cabecera Authorization de la petición a la API.

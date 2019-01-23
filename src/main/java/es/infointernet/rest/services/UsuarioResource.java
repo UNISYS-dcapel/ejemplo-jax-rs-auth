@@ -23,15 +23,15 @@ public class UsuarioResource {
     		@QueryParam("password") String password) {
         try {
  
-            // AquÌ irÌa el cÛdigo de validaciÛn del usuario y contraseÒas,
-        	// por ejemplo valid·ndolo contra una base de datos...
+            // Aqu√≠ ir√≠a el c√≥digo de validaci√≥n del usuario y contrase√±as,
+        	// por ejemplo valid√°ndolo contra una base de datos...
             String roles = authenticate(user, password);
         	
             // Si todo es correcto, generamos el token
             String token = issueToken(user, roles);
  
             // Devolvemos el token en la cabecera "Authorization". 
-            // Se podrÌa devolver tambiÈn en la respuesta directamente.
+            // Se podr√≠a devolver tambi√©n en la respuesta directamente.
             return Response.ok().header(HttpHeaders.AUTHORIZATION, "Bearer " + token).build();
  
         } catch (Exception e) {
@@ -40,7 +40,7 @@ public class UsuarioResource {
     }
  
     private String issueToken(String login, String roles) {
-    	//Calculamos la fecha de expiraciÛn del token
+    	//Calculamos la fecha de expiraci√≥n del token
     	Date issueDate = new Date();
     	Calendar calendar = Calendar.getInstance();
     	calendar.setTime(issueDate);

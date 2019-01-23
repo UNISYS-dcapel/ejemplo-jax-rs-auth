@@ -28,7 +28,7 @@ public class PeliculaResource {
     @Produces({MediaType.APPLICATION_JSON+";charset=utf-8"}) 
     public Pelicula getPelicula(@PathParam("idPelicula") Integer idPelicula) throws Exception{
 		
-        //Habría que llamar a un servicio que devolviera la película con el id pasado como parámetro
+        //HabrÃ­a que llamar a un servicio que devolviera la pelÃ­cula con el id pasado como parÃ¡metro
         return getPeliculaEjemplo(); 
     }
 	
@@ -39,7 +39,7 @@ public class PeliculaResource {
 		
 		//Podemos comprobar si el usuario tiene un rol determinado
 		if(secContext.isUserInRole("ADMINISTRADOR")) {
-            //Realizar alguna operación específica para el administrador
+            //Realizar alguna operaciÃ³n especÃ­fica para el administrador
         }
 
 		//Podemos recuperar el nombre del usuario
@@ -49,7 +49,7 @@ public class PeliculaResource {
             nombre = p.getName();
         }
 		        
-        // Habría que llamar a un servicio de búsqueda de películas
+        // HabrÃ­a que llamar a un servicio de bÃºsqueda de pelÃ­culas
         return getPeliculaEjemplo(); 
     }
 	
@@ -58,7 +58,7 @@ public class PeliculaResource {
 	@RolesAllowed({"ADMINISTRADOR"})
     public void addPelicula() throws Exception{
 		
-		// Habría que llamar a un servicio para crear películas
+		// Habrï¿½a que llamar a un servicio para crear pelï¿½culas
  
     }
 	
@@ -71,11 +71,11 @@ public class PeliculaResource {
 		List<Actor> actores = new ArrayList<Actor>();
         
         Actor a = new Actor();
-        a.setNombre("Penélope Cruz");
+        a.setNombre("PenÃ©lope Cruz");
         actores.add(a);
         
         Pelicula p = new Pelicula();
-        p.setTitulo("Jamón Jamón");
+        p.setTitulo("JamÃ³n JamÃ³n");
         p.setActoresList(actores);
        
         return p;
