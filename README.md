@@ -6,24 +6,25 @@ Más información del proyecto en: http://www.infointernet.es/internet-avanzado/
 # Cómo compilar
 Para compilar y generar el war es necesario tener Maven instalado y ejecutar en el directorio donde tengamos el proyecto:  
 
-$ mvn clean install  
+$ mvn clean install tomcat7:run  
 
 Una vez terminada la construcción, el artefacto puede encontrarse en el directorio "target".
 
 # Cómo desplegarlo
 
-Copia el artefacto (DemoWeb.war) a la carpeta de despliegue de tu servidor, por ejemplo Tomcat.
+ * Copia el artefacto (DemoWeb.war) a la carpeta de despliegue de tu servidor, por ejemplo Tomcat.
+ * También puede entrar en la URL: http://localhost:9090/
 
 # Cómo probarlo
 
-Recomendamos el uso de alguna aplicación como la extensión Postman de Chrome (https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)
+Recomendamos el uso de alguna aplicación como la aplicación Postman  (https://www.getpostman.com/)
 
-* URL para obtener el token JWT: http://localhost:8080/DemoWeb/rest/usuario/login?user=test&password=test  
+* URL para obtener el token JWT: http://localhost:9090/rest/usuario/login?user=test&password=test  
   Usuario normal: test / test  
   Usuario con rol administrador: admin / admin  
   El token viene de vuelta en la cabecera Authorization de la respuesta.  
 
-* Invocar la API (usuario normal): (GET) http://localhost:8080/DemoWeb/rest/pelicula/1
-* Invocar la API (usuario administrador): (PUT) http://localhost:8080/DemoWeb/rest/pelicula/
+* Invocar la API (usuario normal): (GET) http://localhost:9090/rest/pelicula/1
+* Invocar la API (usuario administrador): (PUT) http://localhost:9090/rest/pelicula/
 
-El token debe ir en la cabecera Authorization de la petición a la API.
+El token debe ir en la cabecera Authorization de la petición de tipo BEARER a la API.
